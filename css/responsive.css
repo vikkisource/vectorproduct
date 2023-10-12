@@ -1,0 +1,128 @@
+@media  (max-width: 1200px) {
+     .mr-container{
+        width: 90%;
+     }
+  }
+
+  @media  (max-width: 1024px) {
+ 
+
+  .mr-page-link{
+   display: block;
+   /* justify-content: center; */
+   /* text-align: center; */
+   background: #fff;
+   position: absolute;
+   top: 50%;
+   width: 200px;
+    padding: 20px 40px;
+   left: 50%;
+   transform: translate(-50%,-50%);
+  }
+  .mr-menus ul.mr-page-link > li{
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .mr-menus{
+   position: fixed;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    z-index: 100;
+    background: #c6bfbfb5;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5 ease-in-out;
+
+  }
+  .mr-menus.active{
+   opacity: 1;
+   width: 100%;
+   height: 100%;
+   display: block;
+  }
+  .mr-drop-more {
+   position: static; 
+   min-width: 150px;
+   background-color:transparent; 
+   padding: 10px;
+   display: none;
+    box-shadow: none;
+  }
+  .mr-drop-menu > div{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+  }
+  .mr-drop-menu ul.mr-drop-more li {
+   
+   border-bottom: 1px solid #c2c2c2;
+
+  }
+  .bu-icon{
+   display: block;
+  }
+  .mr-page-link i.ri-close-circle-fill{
+   display: block;
+   position: absolute;
+   font-size: 40px;
+   right: -13px;
+   top: -13px;
+ }
+ .mr-banpara{
+   width: 50%;
+ }
+ .mr-product{
+   width: 300px;
+   min-width: 300px;
+   margin-bottom: 20px;
+   margin-right:0px;
+ }
+ .mr-formfield{
+   width: 60%;
+ }
+ .mr-products{
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: space-between;
+ }
+ .product-name a{
+  font-size: 22px;
+ }
+}
+
+@media (max-width:768px){
+  .produt-location, .sep-line,.mr-forms button{
+    display: none;
+  }
+  .mr-title{
+    font-size: 25px;
+  }
+  .mr-banpara{
+    width: 100%;
+  }
+  .mr-formfield{
+       width: 100%;
+       position: relative;
+  }
+  .srch-icon{
+    position: absolute;
+    right: 0px;
+    top: 20px;
+  }
+  
+  .product-labels{
+    display: block;
+  }
+  .product-nextpage{
+    flex-direction: column;
+  }
+   .prd-botmright{
+    margin-top: 20px;
+   }
+   .mr-product{
+    min-width: 100%;
+   }
+}

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product Page</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://www.solodev.com/assets/pagination/jquery.twbsPagination.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+
+<!-- <script>
+    function openmenu(){
+        const element = document.getElementById('dropmenu');
+        element.classList.toggle('active');
+    }
+    $('#pagination-demo').twbsPagination({
+  totalPages: 2,
+  // the current page that show on start
+  startPage: 1,
+
+  // maximum visible pages
+  visiblePages: 2,
+
+  initiateStartPageClick: true,
+
+  // template for pagination links
+  href: false,
+
+  // variable name in href template for page number
+  hrefVariable: '{{number}}',
+
+  // Text labels
+  first: 'First',
+  prev: 'Previous',
+  next: 'Next',
+  last: 'Last',
+
+  // carousel-style pagination
+  loop: false,
+
+  // callback function
+  onPageClick: function (event, page) {
+    $('.page-active').removeClass('page-active');
+    $('#page'+page).addClass('page-active');
+  },
+
+  // pagination Classes
+  paginationClass: 'pagination',
+  nextClass: 'next',
+  prevClass: 'prev',
+  lastClass: 'last',
+  firstClass: 'first',
+  pageClass: 'page',
+  activeClass: 'active',
+  disabledClass: 'disabled'
+
+});
+  
+    // document.addEventListener("click",function(){
+    //     openmenu();
+    // });
+</script> -->
+<body>
+    <div class="mr-Container bg-Container">
+        <!-- -------------  Header Start ---------- -->
+        <div class="mr-navbar mr-flex mr-justify-between mr-align-center">
+            <div class="mr-navsec mr-flex mr-align-center">
+                <div class="mr-logo">
+                    <h2>MR</h2>
+
+                </div>
+                <div onclick="openmbmenu()">
+                    <svg  class="bu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 4h18v2H3V4zm0 7h12v2H3v-2zm0 7h18v2H3v-2z"/></svg>
+                </div>
+
+                <div class="mr-menus" id="mobilemenu">
+                    <ul class="mr-flex mr-page-link">
+                        <i onclick= "openmbmenu()" class="ri-close-circle-fill"></i>
+                        <li><a href="#">Vectors</a></li>
+                        <li><a href="#">Photos</a></li>
+                        <li><a href="#">PSD</a></li>
+                        <li><a href="#">Video</a></li>
+                        <li class="mr-drop-menu" onclick="openmenu()"><div><span>More</span><span class="dropmenu"></span></div>
+
+                            <ul class="mr-drop-more" id="dropmenu">
+                                <li><a href="#">Link More..</a></li>
+                                <li><a href="#">Link More..</a></li>
+                                <li><a href="#">Link More..</a></li>
+                            </ul>
+                        
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mr-forms mr-flex mr-align-center">
+                <button><span>+</span><span>Submit</span></button>
+                <div class="mr-gmail mr-flex mr-justify-between mr-align-center">
+                    <p class="mr-mail"></p>
+                </div>
+                <div class="mr-fb mr-flex mr-justify-between mr-align-center">
+                    <p class="mr-faceb"></p>
+                </div>
+            </div>
+
+        </div>
+        <!-- -------------  Header End---------- -->
+
+        <!--  ---------------- Banner start------------------ -->
+        <div class="mr-bannercontainer">
+            <div class="mr-titleblog">
+                <p class="mr-title">Popular Pro Stock Vectors</p>
+                <p class="mr-banpara">High quality Vectors with worry-free licensing for personal and commercial User</p>
+
+            </div>
+            <div class="mr-formfield">
+
+
+
+                <select class="dropdow-field">
+					<option>Vectors</option>
+					<option>Vecotos1</option>
+				</select>
+                <!-- <button class="dropdown-field"><span>Vectors</span><span ></span></button> -->
+                <input type="text" class="srch-field" placeholder="Search Vector">
+
+                <img class="srch-icon" src="images/srch.png">
+
+            </div>
+
+        </div>
+        <!-- ------------------------- Banner End -------------- -->
+
+
+        <!-- 	------------------- product blogs ---------------- -->
+        <div class="product-blogs">
+            <div class="product-label">
+                
+                <ul class="product-labels mr-flex">
+                    <li class="dep-name" onclick="tabwork(event,'latest')"><a  class="t-black">Latest</a></li>
+                    <li class="dep-name active" onclick="tabwork(event,'popular')"> <a  class="t-black">Popular</a></li>
+                    <li class="sep-line"></li>
+                    <li class="dep-name t-red" onclick="tabwork(event,'premium')">Premium</li>
+                    <li  class="dep-name t-blue"  onclick="tabwork(event,'free')">Free</li>
+                </ul>
+                <div class="mr-flex mr-align-center">
+                      <p class="fill-prd"></p>
+                      <p class="add-prd"></p>
+
+                </div>
+
+
+            </div>
+
+              <!-- ---------------------------------------------------------
+                            Latest Product
+              --------------------------------------------------------               -->
+            <div class="dep-page" id = "latest">
+
+            <div class="mr-products">
+               
+                <div class="mr-product">
+                    <div class="mr-proimg">
+                        <img src="images/product1.jpg">
+                        <p class="product-status"><span class="prd-lock"></span><span class="product-premium">Premium</span></p>
+
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name"><a href="#">Dog illustration</a></p>
+                        <a class="prd-download"><span class="prod-down">Download</span><span class="dwd-icon"></span></a>
+                    </div>
+
+                </div>
+
+                <div class="mr-product" >
+                    <div class="mr-proimg">
+                        <img src="images/product2.png">
+                        <p class="product-status"><span class="prd-lock"></span><span class="product-premium">Premium</span></p>
+
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name"><a href="#">Astronaut riding</a></p>
+                        <p class="prd-download"><span class="prod-down">Download</span><span class="dwd-icon"></span></p>
+                    </div>
+
+                </div>
+
+            
+
+            </div>
+
+              
+            </div>
+                   <!-- --------------------------------------------------------
+                           Popular Product
+                    --------------------------------------------------------          -->
+            <div class="dep-page" id = "popular" style="display: block;">
+
+                <div class="mr-products">
+                   
+                    <div class="mr-product">
+                        <div class="mr-proimg">
+                            <img src="images/product1.jpg">
+                            <p class="product-status"><span class="prd-lock"></span><span class="product-premium">Premium</span></p>
+    
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name"><a href="#">Dog illustration</a></p>
+                            <a class="prd-download"><span class="prod-down">Download</span><span class="dwd-icon"></span></a>
+                        </div>
+    
+                    </div>
+    
+                    <div class="mr-product" >
+                        <div class="mr-proimg">
+                            <img src="images/product2.png">
+                            <p class="product-status"><span class="prd-lock"></span><span class="product-premium">Premium</span></p>
+    
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name"><a href="#">Astronaut riding</a></p>
+                            <p class="prd-download"><span class="prod-down">Download</span><span class="dwd-icon"></span></p>
+                        </div>
+    
+                    </div>
+    
+                    <div class="mr-product" >
+                        <div class="mr-proimg">
+                            <img src="images/product3.jpg">
+                            <p class="product-status"><span class="prd-unlock"></span><span class="product-premium">Free</span></p>
+    
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name"><a href="#">Rockstar guitarist</a></p>
+                            <p class="prd-download"><span class="prod-down">Download</span><span class="dwd-icon"></span></p>
+                        </div>
+    
+                    </div>
+                
+    
+                </div>
+    
+                  
+                </div>
+
+                   <!-- --------------------------------------------------------
+                                            Premium Product
+                   --------------------------------------------------------  -->
+                <div class="dep-page" id = "premium">
+
+                    <div class="mr-products">
+                       
+                        <div class="mr-product">
+                            <div class="mr-proimg">
+                                <img src="images/product1.jpg">
+                                <p class="product-status"><span class="prd-lock"></span><span class="product-premium">Premium</span></p>
+        
+                            </div>
+                            <div class="product-info">
+                                <p class="product-name"><a href="#">Dog illustration</a></p>
+                                <a class="prd-download"><span class="prod-down">Download</span><span class="dwd-icon"></span></a>
+                            </div>
+        
+                        </div>
+        
+                     
+                    
+        
+                    </div>
+        
+                      
+                    </div>
+<!-- 
+               --------------------------------------------------------------
+                          Free Product
+               -------------------------------------------------------------            -->
+                <div class="dep-page" id = "free">
+
+                    <div class="mr-products">
+                      
+                        <div class="mr-product" >
+                            <div class="mr-proimg">
+                                <img src="images/product3.jpg">
+                                <p class="product-status"><span class="prd-unlock"></span><span class="product-premium">Free</span></p>
+        
+                            </div>
+                            <div class="product-info">
+                                <p class="product-name"><a href="#">Rockstar guitarist</a></p>
+                                <p class="prd-download"><span class="prod-down">Download</span><span class="dwd-icon"></span></p>
+                            </div>
+        
+                        </div>
+                    
+        
+                    </div>
+        
+                      
+                    </div>
+
+            <div class="product-nextpage">
+                <div class="produt-location">
+                    <div>
+                        <p class="prd-location">Discover All</p>
+                        <p class="prd-location">Collections</p>
+                    </div>
+                    <div class="mr-locimgs">
+                        <ul class="prd-imgloc">
+                            <li><img src="images/product1.jpg"></li>
+                            <li><img src="images/product2.jpg"></li>
+                            <li><img src="images/product3.jpg"></li>
+                            <li><img src="images/product1.jpg"></li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="prod-nxtbtn">
+                    <span>Next Page</span>
+                    <span class="arrow-right"></span>
+
+
+                </button>
+                <div class="prd-botmright">
+                    <ul id="pagination-demo" class="pagination-lg pull-right"></ul>
+                    <p class="prd-pagtxt">Page</p>
+                    <p class="lft-arw"></p>
+                    <p class="pag-no">1</p>
+                    <p class="rgh-arw"></p>
+                    <p class="tot-pag">of 290</p>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ------------------------ product blog end-------------- -->
+
+    </div>
+
+  <script>
+         const alproduct = document.getElementsByClassName('mr-product')
+        //  alert(alproduct.length);
+
+           for(i=1;i<alproduct.length;i++){
+                  
+                    
+                    alproduct.style.transform =translatex('300px');
+                  
+           }
+  </script>
+  <script>
+    function openmbmenu(){
+         const mbmenu = document.getElementById('mobilemenu');
+
+         mbmenu.classList.toggle('active');
+    }
+    function tabwork(event , category){
+     const deppage = document.getElementsByClassName('dep-page');
+      for(i=0;i<deppage.length;i++){
+          deppage[i].style.display='none';
+      }
+
+        const curdeppage = document.getElementById(category);
+        curdeppage.style.display ='block';
+
+        const depname =document.getElementsByClassName('dep-name');
+
+        for (i = 0; i < depname.length; i++) {
+    depname[i].className = depname[i].className.replace(" active", "");
+  }
+
+        event.currentTarget.className += " active";
+       
+    }
+</script>
+</body>
+
+</html>
